@@ -1,0 +1,33 @@
+name: Reproduced upstream Cloudroom issue
+about: Generic, independently reproducible defect with synthetic input only
+labels: [upstream-triage]
+body:
+  - type: markdown
+    attributes:
+      value: "Only generic Cloudroom issues reproduced on unmodified upstream are welcome. Never attach private data, raw logs, credentials or security vulnerabilities."
+  - type: input
+    id: upstream
+    attributes:
+      label: Original Cloudroom commit or version
+      placeholder: "40-character commit SHA or version"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Synthetic reproduction steps
+      description: No company-specific names, credentials, private paths or internal sources.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Minimal generic test or public upstream reference
+    validations:
+      required: false
